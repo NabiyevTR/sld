@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1828044F-D08F-482D-8ACC-D9BEA7F3213C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SLD</RootNamespace>
+    <AssemblyName>SLD</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2017\Revit.exe</StartProgram>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProgramW6432)\Autodesk\Revit 2017\Revit.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="RevitAPI">
+      <HintPath>D:\Program Files\Autodesk\Revit 2017\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>D:\Program Files\Autodesk\Revit 2017\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.cs" />
+    <Compile Include="Binder.cs" />
+    <Compile Include="CableList.cs" />
+    <Compile Include="CableListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CableListForm.Designer.cs">
+      <DependentUpon>CableListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrawPanelUpdate.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="UpdateAllData.cs" />
+    <Compile Include="Cleaner.cs" />
+    <Compile Include="CreateDiagramOnSheet.cs" />
+    <Compile Include="DrawDiagramInView.cs" />
+    <Compile Include="DrawDiagramOnSheet.cs" />
+    <Compile Include="DrawUtil.cs" />
+    <Compile Include="EditPanel.cs" />
+    <Compile Include="ElectricUtil.cs" />
+    <Compile Include="ElectricBase.cs" />
+    <Compile Include="SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper.cs" />
+    <Compile Include="ListBoxItem.cs" />
+    <Compile Include="Panel.cs" />
+    <Compile Include="BoardTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoardTable.Designer.cs">
+      <DependentUpon>BoardTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateDiagramInView.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="IPanel.cs" />
+    <Compile Include="Parameters.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SelectBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectBoard.Designer.cs">
+      <DependentUpon>SelectBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.cs" />
+    <Compile Include="PanelUpdate.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icons\draft.ico" />
+    <Resource Include="icons\edit.ico" />
+    <Resource Include="icons\refresh.ico" />
+    <Resource Include="icons\settings.ico" />
+    <Resource Include="icons\sheet.ico" />
+    <Content Include="SLD.addin">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoardTable.resx">
+      <DependentUpon>BoardTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CableListForm.resx">
+      <DependentUpon>CableListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectBoard.resx">
+      <DependentUpon>SelectBoard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ElectricalHelpers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2017"
+copy "$(ProjectDir)bin\debug\*.dll" "$(AppData)\Autodesk\REVIT\Addins\2017"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterClean">
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2017\SLD.addin" />
+    <Delete Files="$(AppData)\Autodesk\REVIT\Addins\2017\SLD.dll" />
+  </Target>
+</Project>

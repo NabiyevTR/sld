@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SLD.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="update_RatedLength" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="update_Load" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="update_Rooms" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="update_MaxLength" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="update_TotalLength" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="set_defaultTitleBlock" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="set_lastTitleBlock" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+    <Setting Name="set_roomsFromLink" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="update_Description" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="set_lastTitleBlockForCableList" Type="System.String" Scope="User">
+      <Value Profile="(Default)">null</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+
+  <AddIn Type="Application">
+    <Name>Однолинейная схема</Name>
+    <Assembly>SLD.dll</Assembly>
+    <FullClassName>SLD.App</FullClassName>   
+    <ClientId>4096d55a-c94c-4b26-9652-bb4b9467bf9e</ClientId>
+    <VendorId>BIMelectro.ru</VendorId>
+    <VendorDescription>NabiyevTR@gmail.com</VendorDescription>
+  </AddIn>
+</RevitAddIns>
